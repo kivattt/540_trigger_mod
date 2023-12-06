@@ -1,0 +1,24 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven { url 'https://jitpack.io/' }
+    }
+    dependencies {
+        classpath('com.github.Fox2Code.FoxLoader:dev:1.2.28')
+    }
+}
+
+apply plugin: 'foxloader.dev'
+
+version '1.0.0'
+
+foxloader {
+    // forceReload = true
+    modId = "five40"
+    modName = "Five40"
+    modVersion = project.version
+    modDesc = "Trigger on 5:40"
+    //modWebsite = "https://github.com/youruser/yourrepo"
+    clientMod = "com.five.forty.Five40Client"
+    //serverMod = "com.five.forty.Five40Server"
+}
